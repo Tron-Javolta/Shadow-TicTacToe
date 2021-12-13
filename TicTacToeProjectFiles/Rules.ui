@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Rules</class>
+ <widget class="QDialog" name="Rules">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>388</width>
+    <height>359</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Rules</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>331</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="2">
+     <widget class="QPushButton" name="okButton">
+      <property name="text">
+       <string>OK</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Shadow TicTacToe Rules</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="3">
+     <widget class="QPlainTextEdit" name="rulesText">
+      <property name="plainText">
+       <string>Start the game with 2 Tic-Tac-Toe game boards. Each board will be a 3x3 grid meaning it consists of 3 rows and 3 columns.  The intersection of a row with a column is called a “cell” (similar to Excel).  The users (2 players) will pick their player id (typically X or O but any marker you want to use to identify them on the board is acceptable) and then proceed to play the game of Tic-Tac-Toe on BOARD1.  Each player takes a turn selecting an empty cell on the board and fills the cell they pick with their marker.  The goal of the game is to get 3 cells of your marker in consecutive order (for example, 3 in a row, 3 down a column, or 3 diagonally would indicate a win).  But, in this modified Tic-Tac-Toe game, you can use BOARD1 OR BOARD2 to win the game, but you CANNOT move your marker on BOARD2. The part of this game that is different than conventional Tic-Tac-Toe is that there will be a second “shadow” board that will be updated in the background as you are playing on the first board. Each cell on the first board has an “index” or number that represents it.  These numbers will be randomly assigned to the cells on BOARD2.   As you pick a cell on BOARD1, a cell with that index or number will be marked on BOARD2 with your id.
+
+Reset - resets the boards to start over.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>okButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Rules</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>299</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>431</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
